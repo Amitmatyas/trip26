@@ -44,22 +44,30 @@
             box-sizing: border-box;
         }
 
-        /* תיבת הסבר קטנה מעל המפה */
-        .info-box {
-            background-color: #ffffff;
-            border-right: 5px solid #3498db;
-            padding: 15px;
+        /* עיצוב כפתור העריכה */
+        .edit-btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 25px;
             margin-bottom: 20px;
-            border-radius: 4px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            width: 100%;
-            box-sizing: border-box;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
-        .info-box p {
-            margin: 0;
-            font-size: 16px;
-            line-height: 1.5;
+        /* אפקט מעבר עכבר על הכפתור */
+        .edit-btn:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        /* אפקט לחיצה על הכפתור */
+        .edit-btn:active {
+            transform: translateY(0);
         }
 
         /* אלמנט שעוטף את המפה כדי שהיא תהיה רספונסיבית (מתאימה לנייד) */
@@ -82,37 +90,25 @@
             height: 100%;
             border: 0;
         }
-
-        /* עיצוב תחתית האתר (פוטר) */
-        footer {
-            background-color: #2c3e50;
-            color: #bdc3c7;
-            text-align: center;
-            padding: 10px;
-            font-size: 14px;
-        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>המפה האינטראקטיבית שלי</h1>
+        <h1>טיול לגרמניה 2026</h1>
     </header>
 
     <main>
-        <div class="info-box">
-            <p>ברוכים הבאים לאתר המפה שלי! ניתן להגדיל, להקטין ולנווט בתוך המפה המוצגת כאן למטה.</p>
-        </div>
+        <!-- כפתור מעבר לעריכת המפה -->
+        <a href="https://www.google.com/maps/d/edit?mid=1HSC2qX2Oett5d5aVrsye_GFvbwTkKps&usp=sharing" target="_blank" class="edit-btn">
+            לעריכת המפה
+        </a>
 
         <!-- מיכל המפה האינטראקטיבית -->
         <div class="map-container">
             <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1HSC2qX2Oett5d5aVrsye_GFvbwTkKps&ehbc=2E312F"></iframe>
         </div>
     </main>
-
-    <footer>
-        <p>© 2026 כל הזכויות שמורות לאתר שלי</p>
-    </footer>
 
 </body>
 </html>
